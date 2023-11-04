@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="ss.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap" rel="stylesheet">
+</head>
+<title>Nurin's Webpage</title>
+<body>
+
+    <div class="hello">
+        <h2>Hello</h2>
+        <h2>Hello</h2>
+    </div>
+
+    <div class="header">
+        <header>
+            <img src="images/catheader.jpeg" alt="Header Image">
+        </header>
+    </div>
+
+    <section>
+        <aside>
+            <div class="sidebar">
+                <div id="profile" style="display: none;">
+                    <div class="profile-info">
+                        <img src="images/ai210225.jpg" alt="Your Photo" width="150" style="display: block; margin: 0 auto; border-radius: 50%;">
+                        <img src="images/name.png" alt="Name" width="24"> Nurin Batrisyia Emira Binti Mohd Nadzree<br>
+                        <img src="images/dob.png" alt="Date of Birth" width="24"> 30/08/2002<br>
+                        <img src="images/religion.png" alt="Religion" width="24"> Islam<br>
+                        <img src="images/ethnic.png" alt="Race" width="24"> Bajau Iban<br>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+        <div class="main-content">
+            <div id="course" style="display: none;">
+                <h2 class="animate-charcter">Course and Institution</h2>
+                <p>Bachelor of Computer Science (Software Engineering) with Honours, Tun Hussein Onn University</p>
+            </div>
+
+            <div id="skills" style="display: none;">
+                <h2 class="animate-charcter">Programming Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-column">
+                        <ul class="skills-list">
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>C#</li>
+                        </ul>
+                    </div>
+                    <div class="skills-column">
+                        <ul class="skills-list">
+                            <li>PHP</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+
+            <div id="interest" style="display: none;">
+                <h2 class="animate-charcter">Personal Interest</h2>
+                <ul class="skills-list">
+                    <li>Culinary Exploration</li>
+                    <li>Fashion Trends</li>
+                    <li>Personal Style</li>
+                    <li>Exploring New Destinations</li>
+                </ul>
+            </div>
+
+            <div id="plan" style="display: none;">
+                <h2 class="animate-charcter">Future Plan in 2024</h2>
+                <div>
+                    <div style="display: flex; flex-direction: column;">
+                        <img src="images/petronas.png" alt="Petronas Image" width="100">
+                        <p>Embark on an internship at Petronas</p>
+                    </div>
+                </div>
+            </div>                            
+
+            <div id="hobbies" style="display: none;">
+                <h2 class="animate-charcter">Hobbies</h2>
+                <ul class="skills-list">
+                    <li>Crocheting</li>
+                    <li>Cooking</li>
+                    <li>Baking</li>
+                </ul>
+            </div>
+
+            <div id="life" style="display: none;">
+                <h2 class="animate-charcter">Campus Life</h2>
+                <div class="campus-img">
+                        <img class="campusimg" src="images/image1.jpg" alt="Image 1">
+                        <img class="campusimg" src="images/image2.jpg" alt="Image 2">
+                        <img class="campusimg" src="images/image3.png" alt="Image 3">
+                        <img class="campusimg" src="images/image4.jpg" alt="Image 4">
+                        <img class="campusimg" src="images/image5.jpg" alt="Image 5">
+                        <img class="campusimg" src="images/image6.jpg" alt="Image 6">
+                        <img class="campusimg" src="images/image7.png" alt="Image 7">
+                </div>
+            </div>
+        </div>
+        </main>
+    </section>
+
+    <script>
+        // JavaScript to hide the "Hello" message and show the content after a delay
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var hello = document.querySelector('.hello');
+                hello.style.display = 'none';
+                document.getElementById("profile").style.display = "block";
+                document.getElementById("course").style.display = "block";
+                document.getElementById("skills").style.display = "block";
+                document.getElementById("interest").style.display = "block";
+                document.getElementById("plan").style.display = "block";
+                document.getElementById("hobbies").style.display = "block";
+                document.getElementById("life").style.display = "block";
+            }, 2000); // Delay in milliseconds (2 seconds in this example)
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+.hello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.hello h2 {
+    color: #fff;
+    font-size: 8em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%; /* Center horizontally */
+    top: 50%;  /* Center vertically */
+    margin: 0;
+}
+
+.hello h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #FF69B4;
+}
+
+.hello h2:nth-child(2) {
+    color: #FF69B4;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+
+    50% {
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}
+
+.header img {
+    width: 100%; /* Make the image cover the entire header */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .header img {
+        max-height: 350px; /* Adjust the maximum height as needed */
+    }
+}
+
+.header-content {
+    flex: 1; /* Occupy remaining space */
+    padding: 20px;
+}
+
+body {
+    background-image: url('images/10026.jpg'); /* Replace 'your-background-image.jpg' with your image file */
+    background-size: cover; /* Make the image cover the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%; /* Add this line to make the container full width */
+    padding-top: 40px; /* Add top padding to push content down below the header */
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    padding: 10px;
+}
+
+.sidebar {
+    font-family: 'Cormorant', serif;    font-size: 1em;
+    flex: 0 0 200px; /* Set a fixed width for the sidebar */
+    align-self: center; /* Center the sidebar vertically in the container */
+    padding: 20px; /* Add padding to the sidebar */
+    text-align: left; /* Align the text to the left within the sidebar */
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+section {
+    display: -webkit-flex;
+    display: flex;
+  }
+
+.animate-charcter{
+    background-image: linear-gradient(
+        -225deg,
+        rgb(92,71,64) 0%,
+        #937e73 29%,
+        #bba29a 67%,
+        #c0afa0 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-emphasis-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Add CSS styles for the boxes */
+#course, #skills, #interest, #plan, #hobbies, #life {
+    padding: 10px;
+    margin: 10px 0;
+    background: #f7e9e2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Reduce the font size for the content inside the boxes */
+.main-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.main-content p {
+    font-family: 'Cormorant', serif;    
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows */
+    gap: 5px; /* Adjust the gap between items as needed */
+    grid-auto-flow: column; /* Make the grid flow in columns, not rows */
+    max-width: 910px;
+}
+
+.main-content #hobbies, #skills, #interest ul {
+    font-family: 'Cormorant', serif;    font-size: 1em;
+}
+
+#interest ul li::before,
+#hobbies ul li::before {
+    content: "\2022"; /* Use a bullet point (•) as the list item marker */
+    color: #FF69B4; /* Change the color as needed (pink) */
+    margin-right: 5px; /* Add space between the bullet point and the text */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-column {
+    flex: 0 0 48%; /* Set the width for the columns (adjust as needed) */
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 5px;
+}
+
+/* Style the list items */
+.skills-list li:before {
+    content: "\2022"; /* Use a bullet point (•) as the list item marker */
+    color: #FF69B4; /* Change the color as needed */
+    margin-right: 5px; /* Add space between the bullet point and the text */
+}
+
+.campusimg {
+    width: 90px; /* Set the width to your desired size */
+    height: 90px; 
+    flex: 0 0 auto; /* Prevent images from stretching the container */
+    scroll-snap-align: start; /* Snap images to the start of the container */
+}
